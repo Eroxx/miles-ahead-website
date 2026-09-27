@@ -1,0 +1,79 @@
+:root {
+  --green: #66ad3f;
+  --green-deep: #4b8a2a;
+  --ink: #16210f;
+  --ink-soft: #4a5543;
+  --paper: #f7faf3;
+  --card: #ffffff;
+  --line: #dfe8d6;
+  --on-green: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --green: #7cc450;
+    --green-deep: #9bd873;
+    --ink: #eef5e8;
+    --ink-soft: #b3c0aa;
+    --paper: #10160c;
+    --card: #1a2314;
+    --line: #2c3a23;
+    --on-green: #0d1409;
+  }
+}
+[hidden] { display: none !important; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+a { color: var(--green-deep); }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+header.bar { padding: 18px 0; }
+header.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 800; font-style: italic; letter-spacing: -0.01em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+nav a { margin-left: 16px; text-decoration: none; color: var(--ink-soft); font-weight: 600; font-size: 15px; }
+nav a:hover { color: var(--green-deep); }
+
+.hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; padding: 30px 0 60px; }
+.hero h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.05; margin: 0 0 16px; font-weight: 800; font-style: italic; letter-spacing: -0.02em; }
+.hero h1 span { color: var(--green); }
+.hero p.lede { font-size: 20px; color: var(--ink-soft); margin: 0 0 24px; }
+.phone img { width: 100%; max-width: 330px; height: auto; display: block; margin: 0 auto; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.button { display: inline-block; background: var(--green); color: var(--on-green); padding: 13px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+.button.ghost { background: transparent; color: var(--green-deep); border: 2px solid var(--line); }
+.store-badge { display: inline-block; line-height: 0; margin: 11px 0; }
+.store-badge img { height: 44px; width: auto; }
+.note { font-size: 14px; color: var(--ink-soft); margin-top: 12px; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-bottom: 60px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+.doc { max-width: 720px; padding: 10px 20px 60px; margin: 0 auto; }
+.doc h1 { font-size: 38px; line-height: 1.1; margin: 10px 0 6px; font-style: italic; font-weight: 800; }
+.doc .updated { color: var(--ink-soft); font-size: 14px; margin-bottom: 28px; }
+.doc h2 { font-size: 22px; margin: 34px 0 8px; }
+.doc h3 { font-size: 18px; margin: 22px 0 4px; }
+.doc p, .doc li { color: var(--ink); }
+.summary { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--green); border-radius: 12px; padding: 16px 18px; }
+.email-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.email-row code { font-size: 16px; }
+.email-row button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: transparent; color: var(--green-deep); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--ink-soft); font-size: 14px; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+footer a { color: var(--ink-soft); margin-right: 14px; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 10px; }
+  .phone img { max-width: 260px; }
+  .features { grid-template-columns: 1fr; }
+  nav a { margin-left: 12px; font-size: 14px; }
+  .brand span { display: none; }
+}
