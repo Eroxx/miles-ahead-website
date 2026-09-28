@@ -1,3 +1,12 @@
+// Discord invite, in one place. Every [data-discord] link uses it.
+var DISCORD = "https://discord.gg/7Kz8DdVRDG";
+(function () {
+  document.querySelectorAll("[data-discord]").forEach(function (a) {
+    if (!DISCORD) { a.hidden = true; return; }
+    a.href = DISCORD; a.target = "_blank"; a.rel = "noopener";
+  });
+})();
+
 // Support email, in one place. Every [data-email] element shows it.
 var SUPPORT_EMAIL = "eric.linder@gmail.com";
 (function () {
