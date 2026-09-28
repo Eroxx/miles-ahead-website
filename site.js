@@ -8,7 +8,7 @@ var DISCORD = "https://discord.gg/7Kz8DdVRDG";
 })();
 
 // Support email, in one place. Every [data-email] element shows it.
-var SUPPORT_EMAIL = "eric.linder@gmail.com";
+var SUPPORT_EMAIL = "support@milesaheadoflease.com";
 (function () {
   document.querySelectorAll("[data-email]").forEach(function (row) {
     if (!SUPPORT_EMAIL) return;
