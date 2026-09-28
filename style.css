@@ -72,7 +72,16 @@ footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--i
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 footer a { color: var(--ink-soft); margin-right: 14px; }
 
+.gallery { padding: 0 0 56px; }
+.gallery h2 { font-size: 26px; font-style: italic; font-weight: 800; margin: 0 0 18px; }
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.shots figure { margin: 0; text-align: center; }
+.shots img { width: 100%; height: auto; display: block; }
+.shots figcaption { margin-top: 10px; font-weight: 700; font-size: 15px; color: var(--ink-soft); }
+
 @media (max-width: 760px) {
+  .shots { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 62%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .shots figure { scroll-snap-align: start; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 10px; }
   .phone img { max-width: 260px; }
   .features { grid-template-columns: 1fr; }
