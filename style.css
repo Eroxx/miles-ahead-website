@@ -68,6 +68,15 @@ nav a:hover { color: var(--green-deep); }
 .email-row code { font-size: 16px; }
 .email-row button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: transparent; color: var(--green-deep); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
 
+/* Discord: its own mark and blurple, like every app site of Eric's */
+.discord { display: inline-flex; align-items: center; gap: 8px; }
+.discord svg { width: 18px; height: 18px; flex: none; }
+.discord-button { background: #5865F2; color: #fff; }
+.discord-button:hover { background: #4752C4; }
+nav a.nav-discord { background: #5865F2; color: #fff; padding: 6px 12px; border-radius: 999px; }
+nav a.nav-discord:hover { color: #fff; background: #4752C4; }
+footer a.discord svg { width: 14px; height: 14px; }
+
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--ink-soft); font-size: 14px; }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 footer a { color: var(--ink-soft); margin-right: 14px; }
