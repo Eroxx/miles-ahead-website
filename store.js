@@ -2,7 +2,7 @@
 // is live, paste its App Store URL (https://apps.apple.com/...) between the quotes and publish:
 // every [data-store-live] element (Apple's official badge) appears, linked to it, and every
 // [data-store-soon] element ("Coming to the App Store" and the like) disappears.
-var APP_STORE = "";
+var APP_STORE = "https://apps.apple.com/us/app/miles-ahead-of-lease/id6751857922";
 (function () {
   if (!APP_STORE) return;
   document.querySelectorAll("[data-store-live]").forEach(function (el) {
